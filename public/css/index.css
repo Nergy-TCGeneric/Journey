@@ -1,0 +1,87 @@
+html {
+    background-image: url("../images/background-example.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.todo {
+    width: 160px;
+    background-color: blue;
+    height: 80px;
+    color: white;
+    touch-action: none;
+    user-select: none;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.todo p {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+p.title {
+    font-weight: bold;
+}
+
+p.subtitle {
+    color: gray;
+    font-size: 0.8em;
+}
+
+#phase-row {
+    display: flex;
+}
+
+#phase-myfirst-phase {
+    flex: 50%;
+}
+
+#footer-ui {
+    height: 5%;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+#footer-ui * {
+    margin: 0;
+}
+
+#overall-percentages {
+    flex: 80%;
+    color:black;
+    font-weight: bold;
+}
+
+#overall-percentages p.title {
+    padding-left: 0.5em;
+}
+
+#overall-percentages div.percentage {
+    background-color: lightblue;
+    height: 90%;
+}
+
+#user-info {
+    display:flex;
+    flex: 10%;
+    border-top-left-radius: 1em;
+    background-color: gray;
+    font-weight: bold;
+    color:white
+}
+
+#user-pic {
+    flex: 40%;
+}
+
+#user-nickname {
+    flex: 60%;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Interact.js test</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <script type="module" src="js/interaction.js"></script>
+    </head>
+    <body>
+        <div id="phase-row">
+            <!-- phase-row will act like a placeholder -->
+            <div id="phase-myfirst-phase">
+                <!-- Unlike id and class, every attributes shouldn't be stored as CSS attribute, rather it should be stored in DB -->
+                <!-- But there's some exceptions. boolean attributes. -->
+                <div id="todo-1" class="draggable todo" completed>
+                    <p class="title">Wargame! development</p>
+                    <p class="subtitle">What's this?</p>
+                </div>
+            </div>
+        </div>
+        <div id="footer-ui">
+            <div id="overall-percentages">
+                <!-- overall-percentages will act like a placeholder -->
+                <p class="title">62% 완료</p>
+                <div class="percentage"></div>
+            </div>
+            <div id="user-info">
+                <div id="user-pic"></div>
+                <div id="user-nickname">
+                    <p>Genergy7</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
