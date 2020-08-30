@@ -56,9 +56,15 @@ span.remaining_time {
 
 #phase-row {
     display: flex;
+    height: 100%;
 }
 
-#phase-myfirst-phase {
+#phase-row > div {
+    border-left: transparent;
+    border-top: transparent;
+    border-bottom: transparent;
+    border-right: darkgray;
+    border-style: dotted;
     flex: 50%;
 }
 
@@ -94,17 +100,26 @@ span.remaining_time {
     display:flex;
     flex: 10%;
     border-top-left-radius: 1em;
-    background-color: gray;
+    background-color: #494949;
     font-weight: bold;
-    color:white
+    color:white;
+    justify-content: center;
+    align-items: center;
 }
 
 #user-pic {
     flex: 40%;
 }
 
+#user-pic img {
+    display:block;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 2em;
+    height: 2em;
+}
+
 #user-nickname {
     flex: 60%;
-    align-items: center;
-    justify-content: center;
 }

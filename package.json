@@ -1,0 +1,28 @@
+{
+  "name": "journey",
+  "version": "1.0.0",
+  "description": "Interactive todo-list web application (Inspired by Habitica)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tcgeneric/Journey.git"
+  },
+  "keywords": [
+    "todo-list",
+    "interactive"
+  ],
+  "author": "TCGeneric",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tcgeneric/Journey/issues"
+  },
+  "homepage": "https://github.com/tcgeneric/Journey#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.0"
+  }
+}
