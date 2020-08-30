@@ -1,10 +1,12 @@
 const express = require('express')
 const cheerio = require('cheerio')
 const fs = require('fs');
-const todo = require('todo-manage')
+const cors = require('cors')
+const todo = require('./todo-manage.js')
 const app = express()
 
 app.use(express.static(__dirname + "/Journey/public"))
+app.use(cors())
 
 app.get("/", function(req, res) {
     let pathway_data;

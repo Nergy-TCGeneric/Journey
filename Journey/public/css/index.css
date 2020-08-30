@@ -2,6 +2,11 @@ html {
     background-image: url("../images/background-example.png");
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100%;
+}
+
+body {
+    height: 100%;
 }
 
 .todo {
@@ -40,6 +45,12 @@ html {
     background-color: gold;
 }
 
+.todo .controlbox {
+    padding: 1em;
+    display: flex;
+    justify-content: space-around;
+}
+
 p.title {
     font-weight: bold;
 }
@@ -64,6 +75,7 @@ span.remaining_time {
 }
 
 #phase-row > div {
+    height: 100%;
     border-left: transparent;
     border-top: transparent;
     border-bottom: transparent;
