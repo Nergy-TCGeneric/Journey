@@ -11,7 +11,7 @@ function createControlbox(id) {
     box.setAttribute("owner", id)
     let edit = document.createElement("i")
     edit.className = "fas fa-edit"
-    edit.onclick = showEditbox()
+    edit.addEventListener("click", function() {showEditModal(id)})
     let del = document.createElement("i")
     del.className = "fas fa-trash-alt"
     del.onclick = showDeletebox(id)
@@ -24,8 +24,17 @@ function createControlbox(id) {
     return box
 }
 
-function showEditbox() {
-
+function showEditModal(id) {
+    let todo = document.getElementById(id)
+    let modal = document.getElementById("edit-modal")
+    modal.style.display = "block"
+    let close = modal.querySelector(".cancel")
+    close.addEventListener("click", function() {
+        modal.style.display = "none"
+    })
+    let inputs = modal.querySelectorAll("input")
+    inputs[0].value = todo.querySelector(".title").firstChild.textContent
+    inputs[1].value = todo.querySelector(".subtitle").firstChild.textContent
 }
 
 function showDeletebox(id) {

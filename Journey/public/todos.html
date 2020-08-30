@@ -4,10 +4,23 @@
         <meta charset="UTF-8" />
         <title>Project:: Journey</title>
         <link rel="stylesheet" type="text/css" href="./css/index.css" />
+        <link rel="stylesheet" type="text/css" href="./css/modal.css" />
+        <link rel="stylesheet" type="text/css" href="./css/todo.css" />
         <script type="text/javascript" src="./js/interaction.js"></script>
         <script src="https://kit.fontawesome.com/af8cfd7311.js" crossorigin="anonymous" SameSite="none Secure"></script>
     </head>
     <body>
+        <div id="edit-modal">
+            <div class="modal-content">
+                <span class="cancel">&times;</span>
+                <p>Please enter the new title. any special characters will be removed.</p>
+                <form action="/modify" method="POST">
+                    <input type="text" name="title" placeholder="title goes here.." required>
+                    <input type="text" name="subtitle" placeholder="subtitle goes here.." required>
+                    <input type="submit" value="confirm">
+                </form>
+            </div>
+        </div>
         <div id="phase-row">
             <!-- phase-row will act like a placeholder -->
             <!-- Remove the below example when it's all done -->
