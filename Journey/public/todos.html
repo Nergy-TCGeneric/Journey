@@ -10,6 +10,7 @@
         <script src="https://kit.fontawesome.com/af8cfd7311.js" crossorigin="anonymous" SameSite="none Secure"></script>
     </head>
     <body>
+        <!-- Both modal have properties in common. how about create a template and inject it into the document? -->
         <div id="edit-modal">
             <div class="modal-content">
                 <span class="cancel">&times;</span>
@@ -19,6 +20,14 @@
                     <input type="text" name="subtitle" placeholder="subtitle goes here.." required>
                     <input type="submit" value="confirm">
                 </form>
+            </div>
+        </div>
+        <div id="remove-modal">
+            <div class="modal-content">
+                <span class="cancel">&times;</span>
+                <p>Are you sure to remove this todo?</p>
+                <button class="cancel-btn" type="button">No</button>
+                <button class="confirm-btn" type="button">Yes</button>
             </div>
         </div>
         <div id="phase-row">
