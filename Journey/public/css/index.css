@@ -36,6 +36,10 @@ html {
     background-color: blue;
 }
 
+.todo[completed] {
+    background-color: gold;
+}
+
 p.title {
     font-weight: bold;
 }

@@ -3,16 +3,17 @@
     <head>
         <meta charset="UTF-8" />
         <title>Project:: Journey</title>
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <script type="module" src="js/interaction.js"></script>
+        <link rel="stylesheet" type="text/css" href="./css/index.css" />
+        <script type="text/javascript" src="./js/interaction.js"></script>
     </head>
     <body>
         <div id="phase-row">
             <!-- phase-row will act like a placeholder -->
+            <!-- Remove the below example when it's all done -->
             <div id="phase-myfirst-phase">
                 <!-- Unlike id and class, every attributes shouldn't be stored as CSS attribute, rather it should be stored in DB -->
                 <!-- But there's some exceptions. boolean attributes. -->
-                <div id="todo-1" class="draggable todo" completed>
+                <div id="todo-1" class="draggable todo" completed onclick="showControlbox('todo-1')">
                     <div class="category_ribbon"></div>
                     <div class="contents">
                         <p class="title">Wargame! development</p>
@@ -32,7 +33,7 @@
             </div>
             <div id="user-info">
                 <div id="user-pic">
-                    <img src="images/img_avatar.png">
+                    <img src="./images/img_avatar.png">
                 </div>
                 <div id="user-nickname">
                     <p>Genergy7</p>
