@@ -6,7 +6,13 @@ const todo = require('../lib/todo-manage.js')
 const fs = require('fs')
 
 router.get("/:pathwayId", function(req, res) {
-    let pathway_data;
+    let user = req.user
+    if(!user) fs.readFile("./Journey/public/login_failed.html", "utf-8", (err, data) => {
+        if(err) throw err
+        return res.send(data)
+    })
+    // let pathways = 
+    /*
     todo.get_pathway_data("pathway_to_programmer", "Genergy7")
     .then((result) => {
         pathway_data = result
@@ -27,6 +33,7 @@ router.get("/:pathwayId", function(req, res) {
         console.log(`error occured: ${reason}`)
         res.status(503).send("<h1>Oops! something went wrong!</h1>")
     })
+    */
 })
 
 router.post("/:pathwayId/create", function(req, res) {
