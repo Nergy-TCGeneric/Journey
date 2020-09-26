@@ -1,18 +1,50 @@
 html {
-    background-color: #404040;
-    height: 50%;
-}
-
-body {
+    font-family: 'Lato', sans-serif;
+    background-color: #1C1D1E;
+    color: white;
     height: 100%;
 }
 
 #login_div {
     background-color: white;
-    width: 30%;
-    height: 30%;
-    margin: 25% auto 25% auto;
+    width: fit-content;
+    height: auto;
     padding: 1em;
+    margin-top: 10%;
     border-radius: 2em;
     box-shadow: 2px 2px 2px darkgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+#header-container {
+    padding: 16px;
+    font-size: 1.8em;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+}
+
+#header-container >* {
+    padding-right: 16px;
+}
+
+#header-container img {
+    width: 64px;
+    height: 64px;
+}
+
+#content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black
 }

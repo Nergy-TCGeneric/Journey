@@ -5,6 +5,10 @@ const cheerio = require('cheerio')
 const todo = require('../lib/todo-manage.js')
 const fs = require('fs')
 
+router.get("/", function(req, res) {
+    res.end("Pathways selection page")
+})
+
 router.get("/:pathwayId", function(req, res) {
     let user = req.user
     if(!user) fs.readFile("./Journey/public/login_failed.html", "utf-8", (err, data) => {

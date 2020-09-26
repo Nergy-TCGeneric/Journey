@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Project::Journey login</title>
         <meta charset='UTF-8' />
-        <link rel="stylesheet" type="text/css" href="css/login/index.css" />
+        <title>Project::Journey login</title>
+        <link rel="stylesheet" href="../css/login/index.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
     </head>
     <body>
-        <div id="login_div">
-            Login template
-            <!-- Using login token, bring user to the next page -->
+        <div id="header-container">
+            <a href="../">
+                <img src="../images/journey-logo.png">
+            </a>
+            <span>Journey</span>
+        </div>
+        <div id="content-container">
+            <!-- TODO: Clean design is needed -->
+            <div id="login_div">
+                <p class="form-title">Login</p>
+                <form method="POST" action="./login">
+                    <input type="text" id="login_id" placeholder="ID" name="id">
+                    <input type="password" id="login_pwd" placeholder="PWD" name="pwd">
+                    <input type="submit" value="Sign in">
+                </form>
+                <p>Don't have an account?</p>
+                <button>Sign up with Google</button>
+                <button>Sign up with Discord</button>
+                <button>Sign up with Github</button>
+                <button>Sign up with email</button>
+                <!-- Using login token, bring user to the next page -->
+            </div>
         </div>
     </body>
 </html>

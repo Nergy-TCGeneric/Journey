@@ -6,6 +6,7 @@ const app = express()
 const port = 3000
 
 app.use(express.static(__dirname + "/Journey/public"))
+app.use(express.urlencoded({extended: false}))
 app.use("/auth", auth_router)
 app.use("/pathways", pathway_router)
 
