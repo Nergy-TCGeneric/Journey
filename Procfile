@@ -1,1 +1,1 @@
-node index.js
+runserver: node index.js

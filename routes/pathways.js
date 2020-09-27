@@ -6,6 +6,7 @@ const todo = require('../lib/todo-manage.js')
 const fs = require('fs')
 
 router.get("/", function(req, res) {
+    console.log(req.session, req.user)
     res.end("Pathways selection page")
 })
 
