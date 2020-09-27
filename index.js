@@ -15,6 +15,7 @@ const app = express()
 
 passport.init(userDB)
 auth_router.init(userDB, passport.auth_module)
+pathway_router.init(userDB)
 app.use(session({
     secret: secret["session_secret"],
     saveUninitialized: true,
@@ -29,7 +30,7 @@ app.use(passport.auth_module.session())
 app.use(express.static(__dirname + "/Journey/public"))
 app.use(express.urlencoded({extended: false}))
 app.use("/auth", auth_router.router)
-app.use("/pathways", pathway_router)
+app.use("/pathways", pathway_router.router)
 
 // Avaliable specific routes are: /auth, /pathways 
 app.get("/", function(req, res) {

@@ -5,16 +5,26 @@ const cheerio = require('cheerio')
 const todo = require('../lib/todo-manage.js')
 const fs = require('fs')
 
+var userDB = undefined
+
 router.get("/", function(req, res) {
-    console.log(req.session, req.user)
-    res.end("Pathways selection page")
+    let user = req.user
+    if(!user) fs.readFile("./Journey/public/login_failed.html", "utf-8", (err, data) => {
+        if(err) throw err
+        return res.end(data)
+    })
+    userDB.useDb("journey_users").collection("normal_user").findOne({id:user.id})
+    .then(function(result) {
+        console.log(result)
+        // Use pathways list, load some pathways first
+    })
 })
 
 router.get("/:pathwayId", function(req, res) {
     let user = req.user
     if(!user) fs.readFile("./Journey/public/login_failed.html", "utf-8", (err, data) => {
         if(err) throw err
-        return res.send(data)
+        return res.end(data)
     })
     // let pathways = 
     /*
@@ -49,4 +59,7 @@ router.post("/:pathwayId/edit/:todoId", function(req, res) {
 
 })
 
-module.exports = router
+module.exports = {
+    router: router,
+    init: function(db) { userDB = db}
+}
