@@ -17,7 +17,7 @@ passport.init(userDB)
 auth_router.init(userDB, passport.auth_module)
 pathway_router.init(userDB)
 app.use(session({
-    secret: secret["session_secret"],
+    secret: secret["session-secret"],
     saveUninitialized: true,
     resave: true,
     store:new MongoStore({

@@ -5,24 +5,6 @@ html {
     height: 100%;
 }
 
-#login_div {
-    background-color: white;
-    width: fit-content;
-    height: auto;
-    padding: 1em;
-    margin-top: 10%;
-    box-shadow: 2px 2px 2px darkgray;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.form-title {
-    text-align: center;
-    font-weight: bold;
-    font-size: 2em;
-}
-
 #header-container {
     padding: 16px;
     font-size: 1.8em;
@@ -40,10 +22,16 @@ html {
     height: 64px;
 }
 
-#content-container {
+#register_div {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    width: 20%;
+    padding: 16px;
+    color: black;
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    color: black
+    font-weight: bold;
 }
